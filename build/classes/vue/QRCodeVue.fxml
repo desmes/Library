@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.ControleurQRCode">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <padding>
+      <Insets bottom="10.0" left="30.0" top="20.0" />
+   </padding>
+   <children>
+      <Button mnemonicParsing="false" onAction="#genereQRCode" text="Génèrer le QRCODE" GridPane.columnSpan="2" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin></Button>
+      <Button mnemonicParsing="false" onAction="#printQrCode" prefHeight="25.0" prefWidth="122.0" text="Imprimer" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets left="80.0" />
+         </GridPane.margin></Button>
+      <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="250.0" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="7">
+         <GridPane.margin>
+            <Insets bottom="15.0" top="5.0" />
+         </GridPane.margin>
+      </TextArea>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2">
+         <children>
+            <Label prefWidth="55.0" text="Auteur :">
+               <HBox.margin>
+                  <Insets top="7.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="auteur" prefHeight="25.0" prefWidth="190.0">
+               <HBox.margin>
+                  <Insets left="15.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <children>
+            <Label prefWidth="40.0" text="Titre :">
+               <HBox.margin>
+                  <Insets top="7.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="titre" prefHeight="25.0" prefWidth="190.0">
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <ImageView fx:id="imageView" fitHeight="220.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="7.0" left="20.0" top="63.0" />
+         </GridPane.margin>
+      </ImageView>
+      <Label fx:id="statusQRCode" alignment="CENTER" prefHeight="25.0" prefWidth="260.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <children>
+            <Label prefWidth="50.0" text="Texte :">
+               <HBox.margin>
+                  <Insets top="7.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</GridPane>

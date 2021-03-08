@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane hgap="10.0" prefHeight="800.0" prefWidth="605.0" style="-fx-background-color: #D5DBDB;" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.ControleurBibliotheque">
+	<columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="211.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="219.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="0.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="Auteur" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="104.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets top="15.0" />
+         </padding></Label>
+      <Label text="Livre" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="65.0" top="15.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label text="Livre sélectionné" textFill="#545252" underline="true" GridPane.columnSpan="2" GridPane.rowIndex="9">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label text="Supprimer le livre sélectionné" GridPane.columnSpan="2" GridPane.rowIndex="10">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin></Label>
+      <Label text="Générer un QRCODE" GridPane.columnIndex="1" GridPane.rowIndex="11">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+      <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#supprimerLivre" prefWidth="120.0" text=" Supprimer" GridPane.columnIndex="2" GridPane.rowIndex="10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/re.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#creerQRCode" prefHeight="0.0" prefWidth="120.0" text="Créer " GridPane.columnIndex="2" GridPane.rowIndex="11">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="24.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/qrT.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label text="Ajouter un auteur" textFill="#545252" underline="true" GridPane.columnSpan="2" GridPane.rowIndex="13">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#ajouterUnAuteur" prefHeight="0.0" prefWidth="120.0" text=" Ajouter " GridPane.columnIndex="2" GridPane.rowIndex="13">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/addt.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label text="Ajouter un livre" textFill="#545252" underline="true" GridPane.columnSpan="2" GridPane.rowIndex="15">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label text="ISBN :" GridPane.rowIndex="16">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label text="Titre :" GridPane.rowIndex="17">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label text="Editeur :" GridPane.rowIndex="18">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label text="Année :" GridPane.rowIndex="19">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#ajouterUnLivre" prefWidth="120.0" text="Ajouter " GridPane.columnIndex="2" GridPane.rowIndex="19">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/addt.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TextField fx:id="titre" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+      <TextField fx:id="editeur" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+      <TextField fx:id="annee" GridPane.columnIndex="1" GridPane.rowIndex="19" />
+      <ComboBox fx:id="auteursComboBox" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+      <TextField fx:id="isbn" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+      <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Separator>
+      <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="12">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></Separator>
+      <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="14">
+         <GridPane.margin>
+            <Insets top="2.0" />
+         </GridPane.margin></Separator>
+      <ImageView fitHeight="80.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.columnSpan="2">
+         <image>
+            <Image url="/images/logoBtr.png" />
+         </image>
+         <GridPane.margin>
+            <Insets left="105.0" top="20.0" />
+         </GridPane.margin>
+      </ImageView>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="6">
+         <children>
+            <ListView fx:id="auteurs" prefHeight="200.0" prefWidth="265.0"/>
+            <ListView fx:id="livres" prefHeight="200.0" prefWidth="265.0">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </ListView>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="40.0" left="30.0" right="30.0" top="20.0" />
+   </padding>
+	<!-- TODO Add Nodes -->
+</GridPane>
